@@ -1,10 +1,10 @@
-CC = python3
-CFLAGS = -B 
-TARGET =
-SRC = main.py
-ARG = sample.txt
+FILENAME = main
+ARG = sample
 
-ALL: $(SRC)
-	$(CC) $(CFLAGS) $(SRC) $(ARG) 
+default: compile
+
+compile:
+	python3 -B $(FILENAME).py $(ARG).txt
 
 clean:
+	rm $(ARG).bin
